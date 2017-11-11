@@ -1,9 +1,9 @@
 # Installation #
-1. Install a webserver
-2. Install PHP
-3. Create a new folder called "up" in the same directory of index.php
+1. Installer un serveur web
+2. Installer PHP
+3. Creée un dossier nomer "up" dans le même dossier que index.php
 4. `chmod 755 up`
-5. That's it
+5. C'est tout !
 
 # Configuration #
 *   `$title`: Titre de la page
