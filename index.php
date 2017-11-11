@@ -1,8 +1,8 @@
 <?php
 // Configuration
-$title = 'Image Uploader';
+$title = 'VoxImage';
 $filedir = 'up';
-$maxsize = 5242880; //max size in bytes
+$maxsize = 10485760; //max size in bytes
 $allowedExts = array('png', 'jpg', 'jpeg', 'gif');
 $allowedMime = array('image/png', 'image/jpeg', 'image/pjpeg', 'image/gif');
 $baseurl = $_SERVER['HTTP_HOST'].dirname($_SERVER['REQUEST_URI']).'/'.$filedir;
@@ -16,14 +16,13 @@ $baseurl = $_SERVER['HTTP_HOST'].dirname($_SERVER['REQUEST_URI']).'/'.$filedir;
 	<div id="upload">
 		<form enctype="multipart/form-data" action="<?php print $_SERVER['PHP_SELF']; ?>" method="POST">
 		<input type="hidden" name="MAX_FILE_SIZE" value="5242880" />
-		Choose a file to upload: <br />
+		Fichier a uploader: <br />
 		<input size="62"  name="file" type="file" accept="image/*" />
-		<input type="submit" value="Upload File" />
+		<input type="submit" value="Uploader le Fichier" />
 		</form>
 		<div id="info">
-		Max file size: 5mb <br/>
-		Supported formats: png, jpg, gif <br/>
-		Please don't upload anything illegal
+		Taille max: 10 Mo <br/>
+		Format supporter: png, jpg, gif <br/>
 		</div>
 	</div>
 	<div id="image">
@@ -42,14 +41,14 @@ $baseurl = $_SERVER['HTTP_HOST'].dirname($_SERVER['REQUEST_URI']).'/'.$filedir;
 			$baseurl = $_SERVER['HTTP_HOST'].dirname($_SERVER['REQUEST_URI']).'/'.$filedir;
 			$imgurl = 'http://'.$baseurl.'/'.$newname;
 			print '<br />';
-			print 'Your URL:<br />';
+			print 'Votre lien:<br />';
 			print '<input type="text" value="'.$imgurl.'" ><br /><br />';
 			print '<a href="'.$imgurl.'"><img src="'.$imgurl.'" /></a><br />';
 		}
 
 		else {
 			print '<br />';
-			print 'Something went wrong <br />';
+			print 'Incorrect <br />';
 		}
 		
 	}
